@@ -1,0 +1,13 @@
+version=10.2
+item-uid=4355311
+item-spec=4B4F535441543A41343133302E412D5352433B312E30
+file-version=1
+checksum=f22fa5acb74466bdb4fd6840139291ea
+fetch-size=7003
+mtime=1270882228
+is-extracted=0
+is-headersubst=0
+item-status=ECBD94EB94A9ECA491
+relpath=src/main/webapp/js/common/jquery/jquery.contextMenu.js
+project=4B4F535441543A534F55524345
+project-uid=4274693

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean name="jsonView" class="net.sf.json.spring.web.servlet.view.JsonView" >
+     <property name="jsonConfig" ref="jsonConfig" />
+     <property name="contentType">
+         <value>text/xml;charset=utf-8</value>
+     </property>
+    </bean>
+    
+    <bean name="jsonHtmlView" class="net.sf.json.spring.web.servlet.view.JsonView" >
+     <property name="jsonConfig" ref="jsonConfig" />
+     <property name="contentType">
+         <value>text/html;charset=utf-8</value>
+     </property>
+    </bean>
+    
+</beans>
+

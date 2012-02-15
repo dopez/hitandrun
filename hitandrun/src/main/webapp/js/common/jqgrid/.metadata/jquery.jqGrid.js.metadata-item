@@ -1,0 +1,13 @@
+version=10.2
+item-uid=4315034
+item-spec=4B4F535441543A41323735342E412D5352433B312E30
+file-version=1
+checksum=7341dda83ec18e57fdc6231bd1a51102
+fetch-size=229148
+mtime=1308102711
+is-extracted=0
+is-headersubst=0
+item-status=ECBD94EB94A9ECA491
+relpath=src/main/webapp/js/common/jqgrid/jquery.jqGrid.js
+project=4B4F535441543A534F55524345
+project-uid=4274693
