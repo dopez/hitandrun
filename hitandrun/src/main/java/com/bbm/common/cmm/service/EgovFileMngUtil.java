@@ -1,8 +1,6 @@
 package com.bbm.common.cmm.service;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -16,18 +14,17 @@ import java.util.Map.Entry;
 
 import javax.annotation.Resource;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.log4j.Logger;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.bbm.common.cmm.util.StringUtil;
+import com.bbm.common.cmm.util.fcc.service.EgovStringUtil;
+
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.fdl.idgnr.EgovIdGnrService;
 import egovframework.rte.fdl.property.EgovPropertyService;
-import com.bbm.common.cmm.util.StringUtil;
-import com.bbm.common.cmm.util.fcc.service.EgovStringUtil;
 
 /**
  * @Class Name  : EgovFileMngUtil.java
