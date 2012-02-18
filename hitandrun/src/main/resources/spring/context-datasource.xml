@@ -9,4 +9,29 @@
         <property name="username" value="gpsmgr1"/>
         <property name="password" value="abc123"/>
     </bean>
+    
+    
+    <!-- IDGen 데이터소스 -->
+    <bean id="dataSource_idgen" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="net.sf.log4jdbc.DriverSpy"/>        
+        <property name="url" value="jdbc:log4jdbc:oracle:thin:@10.184.71.111:1521:ORANARA"/>
+        <property name="username" value="spsmgr1"/>
+        <property name="password" value="abc123"/>
+    </bean>
+    <!-- IDGen 데이터소스 -->
+    <bean id="dataSource_idgen_pms" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@10.184.71.111:1521:ORANARA"/>
+        <property name="username" value="pmsmgr1"/>
+        <property name="password" value="abc123"/>
+    </bean>
+    <!-- 범정부통계포털 데이터소스 -->
+    <bean id="dataSource_gps" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="net.sf.log4jdbc.DriverSpy"/>        
+        <property name="url" value="jdbc:log4jdbc:oracle:thin:@10.184.71.111:1521:ORANARA"/>
+        <property name="username" value="gpsmgr1"/>
+        <property name="password" value="abc123"/>
+    </bean>
+    
+    
 </beans>

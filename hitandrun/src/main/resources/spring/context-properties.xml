@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean name="propertiesService" class="egovframework.rte.fdl.property.impl.EgovPropertyServiceImpl" destroy-method="destroy">
+		<!--
+		<property name="extFileName">
+			<set>
+		        <map>
+		        	<entry key="encoding" value="UTF-8"/>
+		        	<entry key="filename" value="file:./src/**/refresh-resource.properties"/>
+		        </map>
+	        	<value>file:./src/**/resource.properties</value>
+		        <map>
+		        	<entry key="encoding" value="UTF-8"/>
+		        	<entry key="filename" value="classpath*:META-INF/korean-resource.properties"/>
+		        </map>
+			</set>
+		</property>
+		 -->
+		 
+		<property name="properties">
+	        <map>
+	        	<!--  시스템 정보(배포시 별도 관리 필요)  -->
+	        	<!--  WAS 위치정보(내부 : naraint, 외부 : naraext, 개발 : naradev)  -->
+	        	<entry key="was.LcInfo"      value="hitandrundev"/>
+
+				
+	        	<!--  시스템 공통정보  -->
+	        	<entry key="pageUnit" value="10"/>
+	        	<entry key="pageSize" value="10"/>
+	        	<entry key="pageBackCss" value="paging_back"/>
+	        	<entry key="pageFrontCss" value="paging_front"/>
+	        	<entry key="pageCurrentCss" value="paging_current"/>
+	        	<entry key="pageOtherCss" value="paging_other"/>
+	        	<entry key="pageFirstImagePath" value="/images/egovframework/cmmn/btn_page_pre10.gif"/>
+	        	<entry key="pagePreviousImagePath" value="/images/egovframework/cmmn/btn_page_pre1.gif"/>
+	        	<entry key="pageNextImagePath" value="/images/egovframework/cmmn/btn_page_next1.gif"/>
+	        	<entry key="pageLastImagePath" value="/images/egovframework/cmmn/btn_page_next10.gif"/>
+	        	<!-- 기본 시스템 ID -->
+	        	<entry key="GPS.sysId" value="0010001"/>
+	        	
+	        	<!--  첨부파일 위치정보  -->
+	        	<entry key="Globals.fileStorePath" value="/WAS/narafile"/>
+	        	<entry key="WebImagePath" value="http://10.184.70.83/cmm/fms/getWebImage.do"/>
+	        	
+	        	
+	        	
+	        	<!--  포털시스템 관련 정보  -->
+	        	<!-- 포털메뉴이미지저장경로 -->
+	        	<entry key="GPS.fileStorePath" value="/WAS/narafile/web/gps/menu/"/>
+	        	<!-- 배너이미지저장경로 -->
+	        	<entry key="GPS.bannerPath" value="/WAS/narafile/web/gps/banner/"/>
+	        	<!-- 추천사이트이미지저장경로 -->
+	        	<entry key="GPS.recomendPath" value="/WAS/narafile/web/gps/recomend/"/>
+	        	<!-- 이미지저장경로 -->
+	        	<entry key="GPS.imagePath" value="/WAS/narafile/web/gps/image/"/>
+	        	<!-- 게시판이미지저장경로 -->
+	        	<entry key="GPS.bbsPath" value="/WAS/narafile/web/gps/bbs/"/>
+	        	<!-- 게시판스킨경로 -->
+	        	<entry key="GPS.bbsSkinPath" value="C:\kostat\workspace\narastat\src\main\webapp\WEB-INF\jsp\gps\bbs\skin"/>
+	        	<!-- 실명인증 회원사 아이디 -->
+	        	<entry key="GPS.id" value="NSZ001"/>
+	        	<!-- 실명인증 서비스번호 -->
+	        	<entry key="GPS.srvNo" value="036001"/>
+	        	<!-- 실명인증 복호화용 임시필드 -->
+	        	<entry key="GPS.exVar" value="0000000000000000"/>
+	        	
+	        	
+	        	
+				<!-- 권한체크 여부 -->
+				<entry key="COMMON.authCheckYN" value="Y"/>
+				<!-- 파일 1개당  upload 제한사이즈  -->
+				<entry key="COMMON.file.uploadSize" value="10000000"/>
+				
+	        </map>
+		</property>
+	</bean>
+</beans>

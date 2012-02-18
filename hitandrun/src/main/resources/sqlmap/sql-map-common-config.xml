@@ -11,6 +11,8 @@
 	<sqlMap resource="sqlmap/......xml"/>
 	 -->	
 	 
+	 <sqlMap resource="sqlmap/sample/EgovSample_Sample_SQL.xml"/>
+	 
 </sqlMapConfig>
 	   
 	
