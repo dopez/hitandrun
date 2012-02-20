@@ -80,23 +80,6 @@
             p:basename="messages"/>
     -->
     
-    <!-- Integrated Apache Commons Validator by Spring Modules -->     
-    <!--          
-    <bean id="beanValidator" class="org.springmodules.validation.commons.DefaultBeanValidator">
-        <property name="validatorFactory" ref="validatorFactory"/>
-    </bean>
-
-    <bean id="validatorFactory" class="org.springmodules.validation.commons.DefaultValidatorFactory">
-        <property name="validationConfigLocations">
-            <list>
-                <value>/WEB-INF/config/validator/validator-rules.xml</value>
-                <value>/WEB-INF/config/validator/validator.xml</value>
-            </list>
-        </property>
-    </bean>
-    
-     -->
-    
     
     <!-- For Pagination Tag -->
     
