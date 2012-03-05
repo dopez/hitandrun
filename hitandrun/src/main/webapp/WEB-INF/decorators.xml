@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+	<excludes>
+		<pattern>/adm/login*</pattern>
+		<pattern>/adm/export/*</pattern>
+		<pattern>/adm/dashboard*</pattern>
+		<pattern>*/ajax/*</pattern>
+		<pattern>*/tutor/*</pattern>
+	</excludes>
+
+
+	<decorator name="main" page="main.ftd">
+		<pattern>/adm/*</pattern>
+	</decorator>
+
+	<decorator name="standard" page="main.ftd">
+		<pattern>*</pattern>
+	</decorator>
+
+	<decorator name="dialog" page="dialog.ftd">
+		<pattern>*.dlg</pattern>
+	</decorator>
+
+
+	<decorator name="popup" page="popup.ftd">
+		<pattern>*-pop*</pattern>
+		<pattern>*.pop</pattern>
+	</decorator>
+	<decorator name="dup" page="dup.ftd">
+		<pattern>*-dup*</pattern>
+	</decorator>
+</decorators>
