@@ -26,9 +26,8 @@ import com.bbm.sample.service.EgovSampleService;
 import com.bbm.sample.service.SampleDefaultVO;
 import com.bbm.sample.service.SampleVO;
 
-
 import egovframework.rte.fdl.cmmn.AbstractServiceImpl;
-
+import egovframework.rte.fdl.idgnr.EgovIdGnrService;
 
 /**  
  * @Class Name : EgovSampleServiceImpl.java
@@ -46,7 +45,7 @@ import egovframework.rte.fdl.cmmn.AbstractServiceImpl;
  * 
  *  Copyright (C) by MOPAS All right reserved.
  */
-@WebService(endpointInterface = "sample.service.EgovSampleService")
+@WebService(endpointInterface = "com.bbm.sample.service.EgovSampleService")
 @Service("sampleService")
 public class EgovSampleServiceImpl extends AbstractServiceImpl implements
         EgovSampleService {
@@ -55,7 +54,9 @@ public class EgovSampleServiceImpl extends AbstractServiceImpl implements
     @Resource(name="sampleDAO")
     private SampleDAO sampleDAO;
     
-
+    /** ID Generation */
+    @Resource(name="egovIdGnrService")    
+    private EgovIdGnrService egovIdGnrService;
 
 	/**
 	 * 글을 등록한다.
@@ -67,7 +68,7 @@ public class EgovSampleServiceImpl extends AbstractServiceImpl implements
     	log.debug(vo.toString());
     	
     	/** ID Generation Service */
-    	String id = "100"; //egovIdGnrService.getNextStringId();
+    	String id = egovIdGnrService.getNextStringId();
     	vo.setId(id);
     	log.debug(vo.toString());
     	

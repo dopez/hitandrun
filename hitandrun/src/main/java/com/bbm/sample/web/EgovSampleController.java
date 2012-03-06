@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
-
+import org.springmodules.validation.commons.DefaultBeanValidator;
 
 import com.bbm.sample.service.EgovSampleService;
 import com.bbm.sample.service.SampleDefaultVO;
@@ -67,7 +67,11 @@ public class EgovSampleController {
     @Resource(name = "propertiesService")
     protected EgovPropertyService propertiesService;
 
-
+    /** Validator */
+    /*
+    @Resource(name = "beanValidator")
+	protected DefaultBeanValidator beanValidator;
+	*/
     /**
 	 * 글 목록을 조회한다. (pageing)
 	 * @param searchVO - 조회할 정보가 담긴 SampleDefaultVO
@@ -75,8 +79,8 @@ public class EgovSampleController {
 	 * @return "/sample/egovSampleList"
 	 * @exception Exception
 	 */
-    @RequestMapping(value="/egovSampleList.do")
-    public String index(@ModelAttribute("searchVO") SampleDefaultVO searchVO, 
+    @RequestMapping(value="/sample/egovSampleList.do")
+    public String selectSampleList(@ModelAttribute("searchVO") SampleDefaultVO searchVO, 
     		ModelMap model)
             throws Exception {
     	
@@ -102,24 +106,6 @@ public class EgovSampleController {
         model.addAttribute("paginationInfo", paginationInfo);
         
         return "/egovframework/rte/sample/egovSampleList";
-    } 
-    
-    
-    /**
-	 * 글 목록을 조회한다. (pageing)
-	 * @param searchVO - 조회할 정보가 담긴 SampleDefaultVO
-	 * @param model
-	 * @return "/sample/egovSampleList"
-	 * @exception Exception
-	 */
-    @RequestMapping(value="/test.do")
-    public String test(@ModelAttribute("searchVO") SampleDefaultVO searchVO, 
-    		ModelMap model)
-            throws Exception {
-    	
-    	
-        
-        return "/sample/index";
     } 
 
     /**
@@ -220,13 +206,14 @@ public class EgovSampleController {
     throws Exception {
     	
     	// Server-Side Validation
-    	//beanValidator.validate(sampleVO, bindingResult);
+    	/*
+    	beanValidator.validate(sampleVO, bindingResult);
     	
     	if (bindingResult.hasErrors()) {
     		model.addAttribute("sampleVO", sampleVO);
 			return "/egovframework/rte/sample/egovSampleRegister";
     	}
-    	
+    	*/
         sampleService.insertSample(sampleVO);
         status.setComplete();
         return "forward:/sample/egovSampleList.do";
@@ -247,13 +234,14 @@ public class EgovSampleController {
     throws Exception {
     	
     	// Server-Side Validation
-    	//beanValidator.validate(sampleVO, bindingResult);
+    	/*
+    	beanValidator.validate(sampleVO, bindingResult);
     	
     	if (bindingResult.hasErrors()) {
     		model.addAttribute("sampleVO", sampleVO);
 			return "/egovframework/rte/sample/egovSampleRegister2";
     	}
-    	
+    	*/
         sampleService.insertSample(sampleVO);
         status.setComplete();
         return "forward:/sample/egovSampleList2.do";
@@ -313,13 +301,14 @@ public class EgovSampleController {
             BindingResult bindingResult, Model model, SessionStatus status)
             throws Exception {
 
-    	//beanValidator.validate(sampleVO, bindingResult);
+    	/*
+    	beanValidator.validate(sampleVO, bindingResult);
     	
     	if (bindingResult.hasErrors()) {
     		model.addAttribute("sampleVO", sampleVO);
 			return "/egovframework/rte/sample/sample/egovSampleRegister";
     	}
-    	
+    	*/
         sampleService.updateSample(sampleVO);
         status.setComplete();
         return "forward:/sample/egovSampleList.do";
@@ -340,13 +329,14 @@ public class EgovSampleController {
             BindingResult bindingResult, Model model, SessionStatus status)
             throws Exception {
 
-    	//beanValidator.validate(sampleVO, bindingResult);
+    	/*
+    	beanValidator.validate(sampleVO, bindingResult);
     	
     	if (bindingResult.hasErrors()) {
     		model.addAttribute("sampleVO", sampleVO);
 			return "/egovframework/rte/sample/sample/egovSampleRegister2";
     	}
-    	
+    	*/
         sampleService.updateSample(sampleVO);
         status.setComplete();
         return "forward:/sample/egovSampleList2.do";

@@ -23,7 +23,7 @@
 	        <map>
 	        	<!--  시스템 정보(배포시 별도 관리 필요)  -->
 	        	<!--  WAS 위치정보(내부 : naraint, 외부 : naraext, 개발 : naradev)  -->
-	        	<entry key="was.LcInfo"      value="hitandrundev"/>
+	        	<entry key="was.LcInfo"      value="bbmdev"/>
 
 				
 	        	<!--  시스템 공통정보  -->

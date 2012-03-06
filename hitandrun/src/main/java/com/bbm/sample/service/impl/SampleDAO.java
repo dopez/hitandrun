@@ -22,7 +22,6 @@ import org.springframework.stereotype.Repository;
 import com.bbm.sample.service.SampleDefaultVO;
 import com.bbm.sample.service.SampleVO;
 
-
 import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 
 
