@@ -122,7 +122,7 @@
     </bean>
 	
 	<!-- 
-	<bean name="sampleExcelView" class="com.bbm.sps.sample.excel.SampleExcelView" />
+	<bean name="sampleExcelView" class="com.bbm.sample.excel.SampleExcelView" />
 	 -->
 	
 </beans>
