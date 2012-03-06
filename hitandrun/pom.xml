@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.bbm</groupId>
-	<artifactId>hitandrun</artifactId>
+	<artifactId>baseballmarket</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>hitandrun Maven Webapp</name>
+	<name>baseballmarket Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -347,10 +347,38 @@
     </dependency>
     
  	<dependency>
-		<groupId>org.apache.poi</groupId>
-		<artifactId>poi</artifactId>
-		<version>3.2-FINAL</version>
-	</dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.7</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.7</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>geronimo-stax-api_1.0_spec</artifactId>
+					<groupId>org.apache.geronimo.specs</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>stax-api</artifactId>
+					<groupId>stax</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		
     <dependency>    
       <groupId>javax.servlet</groupId> 
@@ -445,6 +473,9 @@
 		<version>2.2</version>
 	</dependency>
 	
+	
+	
+	<!-- 
 	<dependency>
 		<groupId>opensymphony</groupId>
 		<artifactId>sitemesh</artifactId>
@@ -456,14 +487,14 @@
 		<artifactId>freemarker</artifactId>
 		<version>2.3.18</version>
 	</dependency>
-
+ 	-->
 	
   </dependencies>
   
   	<build>
 		<defaultGoal>install</defaultGoal>
 		<directory>${basedir}/target</directory>
-		<finalName>hitandrun</finalName>
+		<finalName>baseballmarket</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
